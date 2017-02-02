@@ -3,3 +3,5 @@ ASE Tutorial
 HomePage: https://github.com/AshwiniGutha/AseTutorial/wiki
 
 Lab1: https://github.com/AshwiniGutha/AseTutorial/wiki/Lab1
+
+Lab2: https://github.com/AshwiniGutha/AseTutorial/wiki/Lab2
