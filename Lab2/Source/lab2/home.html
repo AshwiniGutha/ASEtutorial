@@ -7,7 +7,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuqX4xU6EVAEDGdwXgQkHZb2x5YUT7oCE&v=3.exp&sensor=true&amp;libraries=places"></script>
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -36,14 +35,14 @@
         }
 
 
-        .weatherModule {
+        .weather{
             background:#f2f2f2;
             height:150px;
             width:250px;
             border: 1px dashed #ccc;
             padding: 1em;
         }
-        #parent_div_1 {
+        #box1 {
             width:200px;
             height:100px;
 
@@ -52,7 +51,7 @@
             margin-left:auto;
             display: inline-block;
         }
-        #parent_div_2{
+        #box2{
             width:200px;
             height:100px;
 
@@ -109,11 +108,8 @@
 
 
 <body>
-
 <br/><br/>
 <h1 align="center"><b><span style= "color: #ff7288; " >Home Page</span></b></h1>
-
-
 
     <div class="intro">
     Hi <label id="name"></label> Welcome!
@@ -134,7 +130,7 @@
         <br/><br/>
         <span style= "color: white;" >Enter Destination State name:</span>
         <input type="text"  ng-model="endstate" id="endstate" />
-<br/><br/>
+        <br/><br/>
         <button id="btn" ng-click="calcRoute(); getWeather()">
             <span style= "color: black;" > Get Route and Weather</span>
         </button>
@@ -142,23 +138,22 @@
     </div>
 
     <div id="map-canvas" style="height: 400px;"></div>
-
     <br/></br>
-    <div id="parent_div_1" class="weatherModule">
+    <div id="box1" class="weather">
         <h4>Source weather</h4>
         <p class="currentConditions" ng-model="srccurrentweather"></p>
         {{srccurrentweather}}
     </div>
 
-    <div id="parent_div_2" class="weatherModule">
+    <div id="box2" class="weather">
         <h4>Destination weather</h4>
         <p class="currentConditions" ng-model="destcurrentweather"></p>
         {{destcurrentweather}}
     </div>
 </div>
-
 </body>
 </html>
+
 <script>
 
     if (typeof(Storage) !== "undefined") {
