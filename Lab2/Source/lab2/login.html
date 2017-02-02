@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+
+
+        /* Full-width inputs */
+        input[type=text], input[type=password] {
+
+
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .input{
+            color:white;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+        }
+        .container {
+            text-align: center;
+            paddidng: 16px
+
+         }
+
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 150px 12px 150px;
+        }
+
+        /* Avatar image */
+        img.avatar {
+            width: 30%;
+
+        }
+h1
+{
+    text-align: center;
+}
+
+        /* The "Forgot password" text */
+        span.psw {
+            color : indigo;
+            text-align: center;
+            padding-top: 16px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+        }
+
+    </style>
+</head>
+    <script type="text/javascript">
+        function addtext()
+        {
+            fname = document.getElementById('uname').value;
+            if (typeof(Storage) !== "undefined") {
+                // Store
+                localStorage.setItem("sname", fname);
+                window.location.href="home.html";
+
+            }
+
+        }
+    </script>
+<h1><b><span style= "color: #ff7288;" >LogIn Page</span></b></h1>
+
+
+<body background="images\bg2.jpg">
+        <div class="imgcontainer">
+            <img src="images\img.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="input" align="center">
+            Username: <input type=text id="uname"/><br/><br/><br/>
+            Password: <input type=password name="pwd"/><br/><br/>
+            <button type="Submit"  onclick="addtext()">LogIn</button><br/>
+            <input type="checkbox" checked="checked"> Remember me
+
+            <br/>
+            <button type="submit"><a href="registration.html" style="color: white; text-decoration: none;">Register</a></button>
+            <br>
+            <span class="psw"> <a href="#">Forgot password?</a></span>
+        </div>
+
+</body>
+</html>
