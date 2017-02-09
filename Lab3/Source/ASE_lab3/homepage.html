@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+    <script data-require="jquery" data-semver="2.0.3" src="http://code.jquery.com/jquery-1.10.2.min.js">
+
+    </script>
+    <script src="main.js"></script>
+    <script src="feeds.js"></script>
+    <style>
+        input[type=text], input[type=password] {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .gle{
+            width: 35%
+        }
+        .input{
+            margin-left: 220px;
+            color:white;
+            width: 70%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+        }
+        .container {
+            text-align: center;
+            paddidng: 16px
+
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 20px 120px 8px 100px;
+        }
+        img.avatar {
+            width: 30%;
+
+        }
+        h1
+        {
+            text-align: center;
+        }
+        span.psw {
+            color : indigo;
+            text-align: center;
+            padding-top: 16px;
+        }
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+        }
+
+    </style>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/knowledge/kgsearch/widget/1.0/widget.min.css">
+    <style>
+        .kge-search-picker {
+            width: <DROPDOWN_MENU_WIDTH>;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/knowledge/kgsearch/widget/1.0/widget.min.js"></script>
+</head>
+<script type="text/javascript">
+    function addtext()
+    {
+        fname = document.getElementById('uname').value;
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("sname", fname);
+            window.location.href="home.html";
+
+        }
+
+    }
+</script>
+<h1><b><span style= "color: #ff7288;" >Home Page</span></b></h1>
+<body background="images\bg2.jpg">
+
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client.js?onload=onLoadCallback';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="imgcontainer">
+    <img src="images\img.jpg" alt="Avatar" class="avatar">
+</div>
+<div class="input" align="center">
+    <div class="gle" align="center">
+    <script>
+        (function() {
+            var cx = '000677610977146738723:rhijcaxtxzo';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+
+
+<gcse:search></gcse:search>
+    </div>
+
+    <input type="text" placeholder="Knowledge web search" id="myInput">
+    <script type="text/javascript">
+        KGSearchWidget("AIzaSyCHwjtYmgIxYMkmR8hbBrLz_cduGSyCZyo", document.getElementById("myInput"), {});
+    </script>
+    </br>
+    <button type="logout"><a href="OauthLogin.html" style="color: white; text-decoration: none;">LogOut</a></button>
+
+
+
+
+
+</div>
+</body>
+</html>

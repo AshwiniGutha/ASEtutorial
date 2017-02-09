@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+    <script data-require="jquery" data-semver="2.0.3" src="http://code.jquery.com/jquery-1.10.2.min.js">
+    </script>
+    <script src="feeds.js"></script>
+    <style>
+        input[type=text], input[type=password] {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .input{
+            color:white;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+        }
+        .container {
+            text-align: center;
+            paddidng: 16px
+
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 20px 120px 8px 100px;
+        }
+        img.avatar {
+            width: 30%;
+
+        }
+        h1
+        {
+            text-align: center;
+        }
+        span.psw {
+            color : indigo;
+            text-align: center;
+            padding-top: 16px;
+        }
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+        }
+
+    </style>
+</head>
+<script type="text/javascript">
+    function addtext()
+    {
+        fname = document.getElementById('uname').value;
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("sname", fname);
+            window.location.href="homepage.html";
+
+        }
+
+    }
+</script>
+<h1><b><span style= "color: #ff7288;" >LogIn Page</span></b></h1>
+<body background="images\bg2.jpg">
+<script>
+    function login()
+    {
+        var myParams = {
+            'clientid' : '314717978350-edur9mjsrjaqv3ns8jk8k9ccash0jlcn.apps.googleusercontent.com',
+            'cookiepolicy' : 'single_host_origin',
+            'callback' : 'loginCallback',
+            'approvalprompt':'force',
+            'scope' : 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
+        };
+        gapi.auth.signIn(myParams);
+    }
+
+    function loginCallback(result)
+    {
+        if(result['status']['signed_in'])
+        {
+            var request = gapi.client.plus.people.get(
+                {
+                    'userId': 'me'
+                });
+            request.execute(function (resp)
+            {
+                var email = '';
+                if(resp['emails'])
+                {
+                    for(i = 0; i < resp['emails'].length; i++)
+                    {
+                        if(resp['emails'][i]['type'] == 'account')
+                        {
+                            email = resp['emails'][i]['value'];
+                        }
+                    }
+                }
+
+                var str = "Name:" + resp['displayName'] + "<br>";
+                str += "Image:" + resp['image']['url'] + "<br>";
+                str += "<img src='" + resp['image']['url'] + "' /><br>";
+
+                str += "URL:" + resp['url'] + "<br>";
+                str += "Email:" + email + "<br>";
+                document.getElementById("profile").innerHTML = str;
+            });
+
+        }
+
+    }
+    function onLoadCallback()
+    {
+        gapi.client.setApiKey('AIzaSyDFzgl16KVffrpauuRFgWSP8Nnf_gCPEIc');
+        gapi.client.load('plus', 'v1',function(){});
+    }
+
+</script>
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client.js?onload=onLoadCallback';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="imgcontainer">
+    <img src="images\img.jpg" alt="Avatar" class="avatar">
+</div>
+<div class="input" align="center">
+    Username: <input type=text id="uname"/><br/>
+    Password: <input type=password name="pwd"/><br/><br/>
+    <button type="Submit"  onclick="addtext()">LogIn</button>
+    <input type="checkbox" checked="checked"> Remember me
+    <br/>
+    <button type="Gmail Login" onclick="login()" /><a href="homepage.html" style="color: white; text-decoration: none;">Sign in with Gmail</a></button>
+    <br/>
+    Don't have an account yet? Register here<br/>
+    <button type="submit"><a href="registration.html" style="color: white; text-decoration: none;">Register</a></button>
+    <br>
+    <span class="psw"> <a href="#">Forgot password?</a></span>
+</div>
+
+</body>
+</html>
