@@ -3,7 +3,7 @@
     package="ashwini.myApp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.type.watch" />
+
 
     <application
         android:allowBackup="true"
