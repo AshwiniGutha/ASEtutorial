@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txt_address" type="id" />
+    <item name="imageView" type="id" />
+    <item name="btn_camera" type="id" />
+    <item name="photo_view" type="id" />
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:weightSum="1"
+    android:visibility="visible"
+    android:background="@drawable/bg4"
+    android:baselineAligned="true">
+
+
+    <EditText
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:id="@+id/Txt_fullNmae"
+        android:hint="Full Name" />
+
+    <EditText
+        android:layout_width="366dp"
+        android:layout_height="50dp"
+        android:id="@+id/Txt_userName"
+        android:hint="Username" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Txt_email"
+        android:hint="PhoneNumber" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_address"
+        android:hint="Address(Use AutoLocate)"
+        android:onClick="host"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/Txt_oassword"
+        android:hint="Password" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="AutoLocate"
+        android:id="@+id/Bt_Locateyou"
+        android:clickable="true"
+        android:onClick="locateMe"
+        android:outlineProvider="bounds"
+        android:layout_gravity="right" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:text="TAKE PIC"
+        android:onClick="capturePhoto"
+        android:outlineProvider="background"
+        android:layout_gravity="left" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload pic"
+        android:id="@+id/btn_upload"
+        android:onClick="openImageIntent"
+        android:layout_gravity="left" />
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Capture Image"-->
+    <!--android:id="@+id/bt_captureImage" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:id="@+id/imv_vapturedImage"-->
+    <!--android:layout_weight="0.55"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:src="CapturedImage" />-->
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="SIGN UP"
+        android:id="@+id/bt_signUp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="naviToMap"
+        android:layout_weight="0.15" />
+
+</LinearLayout>
