@@ -1,14 +1,11 @@
 package ashwini;
 
 import android.Manifest;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
-import android.graphics.drawable.BitmapDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -17,20 +14,18 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.util.*;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -38,24 +33,19 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
 
     public static final int IMAGE_GALLERY_REQUEST = 20;
-    //Global variables.
+
     double longitude = 0;
     double latitude = 0;
     Bitmap photo = null;
     String address;
     private Uri outputFileUri;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+
     private GoogleApiClient client;
 
     @Override
@@ -74,26 +64,21 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -143,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         if (!isGpsEnabled && !isNetworkEnable) {
             EditText edit = (EditText) findViewById(R.id.txt_address);
-            edit.setText("GPS and N/W not available, set manually.", TextView.BufferType.EDITABLE);
+            edit.setText("GPS not available, set manually.", TextView.BufferType.EDITABLE);
         } else {
             if (isNetworkEnable) {
                 mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this);
@@ -170,7 +155,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 }
             }
         }
-        //we have loni or longitude and lati or latitude at this point.
         geo = new Geocoder(this);
 
         try {
@@ -184,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             userAddress.append(address.getCountryName()).append("\t");
         } catch (Exception ex) {
             EditText edit = (EditText) findViewById(R.id.txt_address);
-            edit.setText("Something went wrong while getting address", TextView.BufferType.EDITABLE);
+            edit.setText("Unable to get address", TextView.BufferType.EDITABLE);
         }
 
 
@@ -278,21 +262,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         final File sdImageMainDirectory = new File(root, fname);
         outputFileUri = Uri.fromFile(sdImageMainDirectory);
 
-        // Camera.
+
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-        // Filesystem.
+
         Intent galleryIntent = new Intent();
         galleryIntent.setType("image/*");
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-
-        // Chooser of filesystem options.
         Intent chooserIntent = Intent.createChooser(galleryIntent, "Select Source");
-
-        // Add the camera options.
-        //chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, cameraIntents.toArray(new Parcelable[cameraIntents.size()]));
         chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{cameraIntent});
-
         startActivityForResult(chooserIntent, 12345);
 
     }
@@ -301,19 +279,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public void onStart() {
         super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
+                Action.TYPE_VIEW,
+                "Main Page",
                 Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.ankita.locationandcamera/http/host/path")
+                Uri.parse("android-app://ashwini/http/host/path")
         );
         AppIndex.AppIndexApi.start(client, viewAction);
     }
@@ -322,17 +293,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
+                Action.TYPE_VIEW,
+                "Main Page",
                 Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.ankita.locationandcamera/http/host/path")
+                Uri.parse("android-app://ashwini/http/host/path")
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
