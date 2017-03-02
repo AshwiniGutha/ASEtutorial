@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    }
+]

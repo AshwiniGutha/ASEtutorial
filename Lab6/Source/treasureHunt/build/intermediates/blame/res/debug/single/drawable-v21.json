@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\rippleable.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.google.vr\\sdk-common\\1.20.0\\res\\drawable-v21\\rippleable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\rippleable.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.google.vr\\sdk-common\\1.20.0\\res\\drawable-v21\\rippleable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Ashwi\\Desktop\\gvr-android-sdk-master\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Srinivas Nadella\\Documents\\GitHub\\ASE\\gvr-android-sdk\\samples\\sdk-treasurehunt\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    }
+]
