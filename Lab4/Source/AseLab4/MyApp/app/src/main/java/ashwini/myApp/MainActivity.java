@@ -91,11 +91,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-    public void logout(View v)
-    {
-        //This code redirects the from login page to the home page.
-        Intent redirect = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(redirect);
 
-    }
 }
