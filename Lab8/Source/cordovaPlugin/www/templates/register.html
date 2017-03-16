@@ -1,0 +1,50 @@
+<ion-view title="RegistrationPage" id="registerPage">
+    <ion-content padding="true" style="background: url(img/bg7.jpg) no-repeat center;background-size:cover;" class="has-header">
+        <div class="spacer" style="width: 300px; height: 35px;"></div>
+        
+        <div class="msg" style="color:white;">Please fill the details</div> 
+        <div class="spacer" style="width: 300px; height: 30px;"></div>
+        
+        
+        <form id="signup-form9" class="list">
+            <ion-list id="signup-list1">
+                 <div class="spacer" style="width: 300px; height: 5px;"></div>
+                 <label class="item item-input" id="signup-input15"  >
+                    <input type="text" placeholder="FirstName">
+                </label>
+                <div class="spacer" style="width: 300px; height: 5px;"></div>
+                 <label class="item item-input" id="signup-input15"  >
+                    <input type="password" placeholder="LastName">
+                </label>
+                <div class="spacer" style="width: 300px; height: 5px;"></div>
+                <label class="item item-input" id="signup-input13">
+                    <input type="text" placeholder="Username" ng-model="registerData.name">
+                </label>
+                <div class="spacer" style="width: 300px; height: 5px;"></div>
+                <label class="item item-input" id="signup-input14" name="txtUsername">
+                    <input type="email" placeholder="EmailId" ng-model="registerData.un">
+                </label>
+                <div class="spacer" style="width: 300px; height: 5px;"></div>
+                <label class="item item-input" id="signup-input15" name="txtPwd" >
+                    <input type="password" placeholder="Password" ng-model="registerData.pwd">
+                </label>
+                <div class="spacer" style="width: 300px; height: 5px;"></div>
+                <label class="item item-input" id="signup-input15" name="txtConfirmPwd" >
+                    <input type="password" placeholder="Confirm Password">
+                </label>
+               
+                <div class="spacer" style="width: 300px; height: 5px;"></div>                
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 43px;"></div>
+            <div id="signUp-button-bar3" class="button-bar">
+           
+            <button id="signup-button13" type="submit" style="border-radius:38px 38px 38px 38px;  background-color: rgba(236, 233, 242, 0.75);" class="button   button-block"  ng-click="register()">SignUp</button>
+        </div> 
+             
+        <br><h6>Already have an Account?</h6>
+             <button id="cancelButton" href="#login" ng-click="cancel()" style="border-radius:38px 38px 38px 38px;  background-color: rgba(236, 233, 242, 0.75);" class="button button-block">LogIn</button>
+            
+        </form>
+        
+    </ion-content>
+</ion-view>

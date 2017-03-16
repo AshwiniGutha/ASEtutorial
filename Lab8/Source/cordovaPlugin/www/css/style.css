@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+msg {
+color:white;
+font-size: 15px;
+font-: 
+}
+
+
+
+	
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;		
+ 	}		
+}
+
+
