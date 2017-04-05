@@ -7,8 +7,14 @@
     <style>
         h1 {
             border-bottom: 3px solid #cc9900;
-            color:#FFFFFF;
+            color: #ff5262;
             font-size: 50px;
+        }
+        h3{
+            color: #ff4163;
+            font-size: 50px;
+            text-align: center;
+
         }
         table, th , td  {
             border: 1px solid grey;
@@ -29,9 +35,9 @@
     <script src="no.js"></script>
 
 </head>
-<body ng-app="demoMongo" id="body" background="1.jpg" style="background-size:cover">
+<body ng-app="demoMongo" id="body" background="bg.jpg" style="background-size:cover">
 
-<h1>CRUD operations</h1>
+<h3>CRUD operations</h3>
 <div id="id01"></div>
 
 <script>
@@ -75,11 +81,11 @@
         <center><h2>Update Record</h2></center>
         <center><form method="post" action="http://127.0.0.1:8081/update">
 
-            <input type="text" class="textbox1" name="id2" id="id2" placeholder="Enter the ID" />
-            <input type="text" class="textbox1" name="fn" placeholder="Enter First Name" />
-            <input type="text" class="textbox1" name="ln" placeholder="Enter Last Name"/>
-            <input type="text" class="textbox1" name="ml" placeholder="Enter E-Mail"/>
-            <input type="submit" class="i1" value="Update" >
+            <input type="text" class="textbox1" name="id2" id="id2" placeholder="ID" /><br>
+            <input type="text" class="textbox1" name="fn" placeholder="First Name" /><br>
+            <input type="text" class="textbox1" name="ln" placeholder="Last Name"/><br>
+            <input type="text" class="textbox1" name="ml" placeholder="email"/><br>
+            <br><input type="submit" class="i1" value="Update" >
         </form></center></div>
     <div class="fl2">
         <center><h2>Delete Record</h2></center>
