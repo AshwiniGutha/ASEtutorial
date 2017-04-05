@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoMongo" ng-controller="MongoRestController">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<!--<link rel="stylesheet" href="assets/css/form-elements.css">
+        <!--<link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+
+		<script>
+			function validation()
+			{
+				form = document.forms["regform"];
+				name = form["fname"].value;	//name validation
+
+				mailId = form["email"].value;	//Mail ID validation
+				if(!mailId.match(/^[A-Za-z.]+\@[A-Za-z]+\.[A-Za-z]+$/))
+				{
+					alert("Invalid Mail ID");
+					form.focus();
+					return false;
+				}
+
+
+
+				pwd = form["password"].value;	//password validation
+
+				if(!pwd.match(/^[A-Za-z_]*$/))
+				{
+					alert("Password must contain only alphabets.");
+					form.focus();
+					return false;
+				}
+
+				cnfpwd = form["cpassword"].value;
+				if(pwd != cnfpwd)
+				{
+					alert("Password and confirmed password must match.")
+					form.focus();
+					return false;
+				}
+			}
+		</script>
+		<script>
+			function validataionn() {
+				var j=0;
+
+				var xmlhttp = new XMLHttpRequest();
+				var url = "https://api.mongolab.com/api/1/databases/ase/collections/users?apiKey=AdCRHL4_tFAn75DZFj6hht_A394EoAGV";
+				xmlhttp.onreadystatechange = function () {
+					if (this.readyState == 4 && this.status == 200) {
+						myFunction(this.responseText);
+					}
+				}
+				xmlhttp.open("GET", url, true);
+				xmlhttp.send();
+
+				function myFunction(response) {
+					var arr = JSON.parse(response);
+					var i;
+					var valiu = document.getElementById("form-username").value;
+					var valip = document.getElementById("form-password").value;
+					var arr1 = JSON.parse(response);
+					for (i = 0; i < arr1.length; i++) {
+						hello = arr[i].fname;
+						hey = arr[i].password;
+						if (valiu == hello && valip == hey) {
+
+							window.alert("login  was successful");
+							window.location="home.html";
+							j=1;
+							return true;
+
+						}
+						else {
+
+							window.alert("login is failed");
+
+							j=0;
+							return false;
+						}
+					}
+				}
+
+				//if (j==1){return true;}
+				//else {return false;}
+			}
+		</script>
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    
+                    <div class="row">
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+	                        	<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Login</h3>
+
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-lock"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form  role="form" action="home.html" method="post" class="login-form" onsubmit="return validataionn()"/>
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-username">Username</label>
+				                        	<input type="text" name="form-username" placeholder="Enter Username..." class="form-username form-control" id="form-username">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-password">Password</label>
+				                        	<input type="password" name="form-password" placeholder="Enter Password..." class="form-password form-control" id="form-password">
+				                        </div>
+				                        <button type="submit" class="btn">Sign In</button>
+				                    </form>
+			                    </div>
+		                    </div>
+
+	                        
+                        </div>
+                        
+                        <div class="col-sm-1 middle-border"></div>
+                        <div class="col-sm-1"></div>
+                        	
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Register</h3>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form name= regform role="form" action="home.html" method="post" class="registration-form" ng-submit="insertData();" onsubmit="return validation()" />
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-first-name">Enter First name</label>
+				                        	<input type="text" name="fname" placeholder="First name..." class="form-first-name form-control" ng-model="formData.fname" id="form-first-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-last-name">Enter Last name</label>
+				                        	<input type="text" name="lname" placeholder="Last name..." ng-model="formData.lname" class="form-last-name form-control" id="form-last-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-first-name">Enter Email</label>
+				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" ng-model="formData.email" id="form-email">
+				                        </div>
+										<div class="form-group">
+											<label class="sr-only" for="form-last-name">Enter Password</label>
+											<input type="password" name="password" placeholder="Password" class="form-last-name form-control" ng-model="formData.password" id="form-passwordr">
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="form-last-name">Confirm Password</label>
+											<input type="password" name="cpassword" placeholder="Confirm Password" ng-model="formData.cpassword" class="form-last-name form-control" id="form-cnfpassword">
+										</div>
+
+				                        <button type="submit" class="btn">Register Here</button>
+				                    </form>
+			                    </div>
+                        	</div>
+                        	
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+		<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+		<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+		<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+		<script src="js/index.js"></script>
+    </body>
+
+</html>
